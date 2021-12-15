@@ -2,7 +2,7 @@ from django.http import (HttpRequest, HttpResponse, JsonResponse,
     HttpResponseNotAllowed)
 
 
-def evaluate(request: HttpRequest):
+def evaluate(request: HttpRequest) -> HttpResponse:
     """Evaluate the expression contained in request and return it as JSON."""
 
     if request.method != 'POST':
