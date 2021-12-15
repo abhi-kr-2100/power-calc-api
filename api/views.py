@@ -26,4 +26,13 @@ def evaluate(request: HttpRequest) -> Response:
             status.HTTP_400_BAD_REQUEST
         )
 
-    return Response(request.data)
+    try:
+        # TODO: evaluate the expression
+        result = request.data['expression']
+    except Exception as ex:
+        return Response(
+            {'detail': str(ex)},
+            status.HTTP_400_BAD_REQUEST
+        )
+
+    return Response({'result': result, 'variables': request.data['variables']})
