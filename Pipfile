@@ -11,3 +11,7 @@ djangorestframework = "*"
 
 [requires]
 python_version = "3.8"
+
+[packages.8585e47]
+path = "./libpcalc"
+editable = true
