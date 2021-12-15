@@ -1,0 +1,3 @@
+[submodule "libpcalc"]
+	path = libpcalc
+	url = https://github.com/abhi-kr-2100/libpcalc
