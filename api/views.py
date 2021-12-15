@@ -1,5 +1,5 @@
-from django.http import HttpRequest
-from django.http.response import HttpResponseNotAllowed, JsonResponse
+from django.http import (HttpRequest, HttpResponse, JsonResponse,
+    HttpResponseNotAllowed)
 
 
 def evaluate(request: HttpRequest):
