@@ -20,4 +20,10 @@ def evaluate(request: HttpRequest) -> Response:
             status.HTTP_400_BAD_REQUEST
         )
 
+    if 'variables' not in request.data:
+        return Response(
+            {'detail': 'No variables in payload'},
+            status.HTTP_400_BAD_REQUEST
+        )
+
     return Response(request.data)
